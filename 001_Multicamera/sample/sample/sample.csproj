@@ -93,6 +93,7 @@
   <ItemGroup>
     <TypeScriptCompile Include="scripts\babylon.d.ts" />
     <TypeScriptCompile Include="src\sample.ts" />
+    <TypeScriptCompile Include="src\util.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
