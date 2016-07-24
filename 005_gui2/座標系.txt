@@ -1,0 +1,14 @@
+
+Y up +
+Z forward +  back -
+X right +  left -
+
+
+Ortho 
+
+ortho.width = canvas.width;
+ortho.height = canvas.height;
+ortho.Min   = 0
+ortho.Max   = 1000
+cam.layerMask = 0x1000
+cam (0,0,-100)
