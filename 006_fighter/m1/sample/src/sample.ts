@@ -80,10 +80,6 @@
             }
             this.m_t += this.m_engine.getDeltaTime();
 
-            //if (this.m_piked != null) {
-            //    console.log(this.m_piked);
-            //    this.m_piked = null;
-            //}
             if (Util.Gui.PICKED != null) {
                 console.log(Util.Gui.PICKED);
                 Util.Gui.PICKED = null;
@@ -96,10 +92,6 @@
                     cam.mode = 0;
                 }
             }
-            //if (this.m_lab1 != null) {
-            //    var t2 = Math.floor(this.m_t);
-            //    Util.Gui.ChangeText(this.m_lab1, t2.toString());
-            //}
         }
         private m_bDone: boolean;
         private S_LOAD(bFirst: boolean): void {
@@ -128,6 +120,11 @@
                 this.Goto(this.S_END);
             }
         }
-        private S_END(bFirst: boolean): void { }
+        private S_END(bFirst: boolean): void {
+            if (bFirst) {
+                this.m_scene.debugLayer.show(true);
+            }
+
+        }
     }
 }
