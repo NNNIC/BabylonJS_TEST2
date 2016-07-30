@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="scripts/babylon.max.js" type="text/javascript"></script>
+    <script src="src/util.js"></script>
+    <script src="src/sample.js"></script>
+</head>
+<body>
+    <div>
+        <canvas width="640" height="800" id="renderCanvas"></canvas>
+    </div>
+    <script type="text/javascript">
+        var canvas = document.getElementById("renderCanvas");
+
+        function runBasicScene() {
+            mainScene = new Sample.MainClass(canvas);
+            mainScene.runRenderLoop();
+        }
+
+        runBasicScene();
+    </script>
+</body>
+</html>
