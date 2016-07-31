@@ -120,3 +120,4 @@ var Sample;
     }(Util.StateControl));
     Sample.MainClass = MainClass;
 })(Sample || (Sample = {}));
+//# sourceMappingURL=sample.js.map
