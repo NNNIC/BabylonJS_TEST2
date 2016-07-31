@@ -1,4 +1,7 @@
-﻿module Sample {
+﻿/// <reference path="sample_mapManager.ts"/>
+/// <reference path="sample_uvobj.ts"/>
+
+module Sample {
     export class MainClass extends Util.StateControl {
         public m_engine: BABYLON.Engine;
         public m_scene: BABYLON.Scene;
@@ -104,10 +107,20 @@
                 let uvobj = new Sample.UVObj();
                 go.AddManebehaviour(uvobj);
 
-                this.Goto(this.S_GUI);
+                this.Goto(this.S_CREATE_MAP_MANAGER);
             }
         }
 
+        private S_CREATE_MAP_MANAGER(bFirst: boolean): void {
+            if (bFirst) {
+                let node = new BABYLON.Node("map_manager", Util.Framework.scene);
+                let go = Util.GameObject.Add(node);
+                let man = new Sample.MapManager();
+                go.AddManebehaviour(man);
+
+                this.Goto(this.S_GUI);
+            }
+        }
         //
         private m_debugOn: boolean;
         private m_debugBtn: Util.GuiLabelData;

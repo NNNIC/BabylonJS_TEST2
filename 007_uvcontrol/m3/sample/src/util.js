@@ -11,6 +11,9 @@ var Util;
         function Framework() {
         }
         Framework.Init = function (canvas, engine, scene) {
+            Framework.canvas = canvas;
+            Framework.engine = engine;
+            Framework.scene = scene;
             Util.GameObject.Init();
             Util.Gui.Init(canvas, engine, scene);
         };

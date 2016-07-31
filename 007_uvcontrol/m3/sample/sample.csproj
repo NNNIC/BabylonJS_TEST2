@@ -87,6 +87,7 @@
     <Content Include="data\start.png" />
     <Content Include="packages.config" />
     <Content Include="data\ma1.babylon" />
+    <Content Include="tsconfig.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -110,7 +111,8 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="map\map1.ts" />
-    <TypeScriptCompile Include="scripts\babylon.d.ts" />
+    <None Include="scripts\babylon.d.ts" />
+    <TypeScriptCompile Include="src\sample_mapManager.ts" />
     <TypeScriptCompile Include="src\sample_uvobj.ts" />
     <TypeScriptCompile Include="src\util_gameObject.ts" />
     <TypeScriptCompile Include="src\sample.ts" />

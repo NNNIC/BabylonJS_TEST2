@@ -1,3 +1,5 @@
+/// <reference path="sample_mapManager.ts"/>
+/// <reference path="sample_uvobj.ts"/>
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -88,6 +90,15 @@ var Sample;
                 var go = Util.GameObject.Add(mesh);
                 var uvobj = new Sample.UVObj();
                 go.AddManebehaviour(uvobj);
+                this.Goto(this.S_CREATE_MAP_MANAGER);
+            }
+        };
+        MainClass.prototype.S_CREATE_MAP_MANAGER = function (bFirst) {
+            if (bFirst) {
+                var node = new BABYLON.Node("map_manager", Util.Framework.scene);
+                var go = Util.GameObject.Add(node);
+                var man = new Sample.MapManager();
+                go.AddManebehaviour(man);
                 this.Goto(this.S_GUI);
             }
         };

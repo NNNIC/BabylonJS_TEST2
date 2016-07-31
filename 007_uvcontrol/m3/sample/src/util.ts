@@ -2,7 +2,16 @@
 /// <reference path="util_gameObject.ts"/>
 module Util {
     export class Framework {
-        public static Init(canvas: HTMLCanvasElement, engine: BABYLON.Engine, scene: BABYLON.Scene):void {
+
+        public static canvas: HTMLCanvasElement;
+        public static engine: BABYLON.Engine;
+        public static scene:  BABYLON.Scene;
+
+        public static Init(canvas: HTMLCanvasElement, engine: BABYLON.Engine, scene: BABYLON.Scene): void {
+            Framework.canvas = canvas;
+            Framework.engine = engine;
+            Framework.scene  = scene;
+
             Util.GameObject.Init();
             Util.Gui.Init(canvas, engine, scene);
         }
