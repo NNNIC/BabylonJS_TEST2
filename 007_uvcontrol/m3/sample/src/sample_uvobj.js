@@ -25,7 +25,7 @@ var Sample;
             var m = this.gameObject.node;
             var mat = m.material;
             var tex = mat.diffuseTexture;
-            tex.vOffset = tex.vOffset + 0.01;
+            tex.vOffset = tex.vOffset + 0.05;
             mat.diffuseTexture = tex;
             m.material = mat;
         };

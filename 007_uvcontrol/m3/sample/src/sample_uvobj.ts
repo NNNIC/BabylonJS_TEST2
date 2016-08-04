@@ -25,7 +25,7 @@ module Sample {
             let mat = <BABYLON.StandardMaterial>m.material;
             let tex = <BABYLON.Texture>mat.diffuseTexture;
 
-            tex.vOffset = tex.vOffset + 0.01;
+            tex.vOffset = tex.vOffset + 0.05;
             mat.diffuseTexture = tex;
             m.material = mat;
         }
